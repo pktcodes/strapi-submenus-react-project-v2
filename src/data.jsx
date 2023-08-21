@@ -11,11 +11,11 @@ import {
 } from 'react-icons/fa';
 import { nanoid } from 'nanoid';
 
-const sublinks = [
+const links = [
   {
     pageId: nanoid(),
     page: 'product',
-    links: [
+    subLinks: [
       {
         id: nanoid(),
         label: 'community',
@@ -39,7 +39,7 @@ const sublinks = [
   {
     pageId: nanoid(),
     page: 'solutions',
-    links: [
+    subLinks: [
       {
         id: nanoid(),
         label: 'developers',
@@ -69,7 +69,7 @@ const sublinks = [
   {
     page: 'resources',
     pageId: nanoid(),
-    links: [
+    subLinks: [
       {
         id: nanoid(),
         label: 'starters',
@@ -86,4 +86,4 @@ const sublinks = [
   },
 ];
 
-export default sublinks;
+export default links;
