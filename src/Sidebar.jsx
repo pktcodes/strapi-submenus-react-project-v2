@@ -7,9 +7,13 @@ const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
 
   return (
-    <aside className="sidebar">
+    <aside className={isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}>
       <div className="sidebar-container">
-        <button type="button" className="close-sidebar-btn">
+        <button
+          type="button"
+          className="close-sidebar-btn"
+          onClick={closeSidebar}
+        >
           <FaTimes />
         </button>
         <div className="sidebar-links">
@@ -17,7 +21,7 @@ const Sidebar = () => {
             const { pageId, page, subLinks } = link;
             return (
               <article key={pageId}>
-                <h3>{page}</h3>
+                <h4>{page}</h4>
                 <div className="sidebar-sublinks">
                   {subLinks.map((subLink) => {
                     const { id, icon, label, url } = subLink;

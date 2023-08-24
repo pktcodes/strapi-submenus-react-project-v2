@@ -300,6 +300,11 @@ nav {
 .toggle-btn:hover {
   transform: scale(1.1);
 }
+@media screen and (min-width: 992px) {
+  .toggle-btn {
+    display: none;
+  }
+}
 
 /* 
 ============= 
@@ -333,7 +338,68 @@ Hero
     max-width: 35rem;
     margin: 0 auto;
   }
-  .toggle-btn {
+}
+
+/* 
+============= 
+Sidebar
+=============== 
+*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  /* Toggle */
+  opacity: 0;
+  visibility: hidden;
+}
+.show-sidebar {
+  opacity: 1;
+  visibility: visible;
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+.sidebar-container {
+  padding: 4rem 2rem;
+  position: relative;
+}
+.close-sidebar-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: transparent;
+  font-size: 2rem;
+  color: var(--primary-500);
+  cursor: pointer;
+}
+.sidebar-links article {
+  margin-bottom: 2rem;
+}
+.sidebar-links h4 {
+  margin-bottom: 1rem;
+  color: var(--primary-700);
+}
+.sidebar-sublinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+}
+.sidebar-sublinks a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-transform: capitalize;
+  color: var(--grey-900);
+}
+.sidebar-links svg {
+  color: var(--grey-500);
+}
+@media screen and (min-width: 992px) {
+  .sidebar {
     display: none;
   }
 }
