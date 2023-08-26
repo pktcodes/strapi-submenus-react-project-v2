@@ -435,3 +435,55 @@ NavLinks
     border: 2px solid greenyellow;
   }
 }
+
+/* 
+============= 
+Submenu
+=============== 
+*/
+.submenu {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .submenu {
+    display: block;
+    position: fixed;
+    top: 6rem;
+    left: 50%;
+    background: var(--white);
+    width: var(--fluid-width);
+    max-width: var(--max-width);
+    padding: 2rem;
+    border-radius: var(--borderRadius);
+    transform: rotateX(-90deg) translateX(-50%);
+    transform-origin: top;
+    perspective: 1000px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform ease-in-out 0.3s, opacity ease-in-out 0.2s;
+  }
+  .show-submenu {
+    visibility: visible;
+    opacity: 1;
+    transform: rotateX(0deg) translateX(-50%);
+  }
+  .submenu h5 {
+    color: var(--primary-700);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .submenu-links {
+    display: grid;
+    row-gap: 1rem;
+  }
+  .submenu-links a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-transform: capitalize;
+    color: var(--grey-900);
+  }
+  .submenu-links svg {
+    color: var(--grey-500);
+  }
+}
