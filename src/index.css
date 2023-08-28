@@ -416,23 +416,21 @@ NavLinks
   .nav-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    border: 2px solid red;
+    align-self: stretch;
   }
   .nav-center {
     display: grid;
     grid-template-columns: auto 1fr;
-    border: 2px solid blue;
   }
   .nav-link {
     background-color: transparent;
     border-color: transparent;
     color: var(--white);
     font-size: 1.25rem;
+    padding: 0 1rem;
     text-transform: capitalize;
     cursor: pointer;
     letter-spacing: var(--letterSpacing);
-    border: 2px solid greenyellow;
   }
 }
 

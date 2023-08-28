@@ -4,6 +4,7 @@ import links from './data';
 
 const NavLinks = () => {
   const { setPageId } = useGlobalContext();
+
   return (
     <div className="nav-links">
       {links.map((link) => {
