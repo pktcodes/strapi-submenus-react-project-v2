@@ -1,6 +1,6 @@
 # Strapi Submenus 🎹
 
-> PROD [Live] : https://react-strapi-submenus-prod.netlify.app/
+> PROD [Live] : https://react-strapi-submenus-v2-prod.netlify.app/
 
 #### Strapi Submenus consists of a straightforward user interface where there is a
 
